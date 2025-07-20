@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Review Agent</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AI Review Generator</h1>
+
+      <p>
+        Enter the feedback details below to generate detailed
+        reviews. Each detail should be on a new line, like: <br />
+        <span class="mono-text">title_1: 3(average)</span>
+        <span class="mono-text">title_2: 2(poor)</span>
+      </p>
+
+      <div class="input-group">
+        <label for="feedbackInput"> Feedback Details: </label>
+        <textarea
+          id="feedbackInput"
+          placeholder="Example:
+Performance: 3(average)
+Battery durability: 5(awesome)
+Camera quality: 4(good)
+Display: 2(poor)"
+        ></textarea>
+      </div>
+
+      <button id="generateButton">Generate Review</button>
+
+      <div id="loadingIndicator" class="loading-indicator">
+        <div class="loading-spinner"></div>
+        <p>Generating review...</p>
+      </div>
+
+      <div id="reviewOutput" class="review-output">
+        <h2>Generated Review:</h2>
+        <p id="reviewText"></p>
+        <button id="copyButton" class="copy-button">Copy Review</button>
+      </div>
+
+      <div id="errorMessage" class="error-message">
+        <p>Error: <span id="errorText"></span></p>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
