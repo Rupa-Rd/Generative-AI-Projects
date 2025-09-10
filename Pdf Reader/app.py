@@ -14,14 +14,16 @@ st.title("Pdf Reader")
 file = st.file_uploader("Upload Your PDF", type=["pdf"])
 submit = st.button("Submit")
 
+if "reset" not in st.session_state:
+    st.session_state.reset = False
+    
 if file is not None:
     if submit:
         pdf_content = extract_content(file)
         st.write(pdf_content)
         if st.button("Reset"):
+            st.session_state.reset = True
             st.rerun()
-else:
-    st.error("Invalid File")
 
 
 
