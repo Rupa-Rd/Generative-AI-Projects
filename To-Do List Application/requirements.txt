@@ -1,0 +1,10 @@
+pydantic
+pymongo
+bcrypt
+streamlit
+datetime
+fastapi
+uvicorn[standard]
+pillow
+requests
+time

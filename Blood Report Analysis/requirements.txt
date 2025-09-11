@@ -1,0 +1,12 @@
+pydantic
+pymongo
+fastapi
+streamlit
+python-dotenv
+pypdf
+requests
+datetime
+uvicorn
+langchain_google_genai
+langchain
+pycryptodome==3.15.0
